@@ -11,162 +11,109 @@
       padding: 0;
     }
     body {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Roboto', sans-serif;
-      background-image: url('https://raw.githubusercontent.com/mrapatiteobs/emojime/430b388dfab577cad50dbf9b3b61be7c740fb121/background.jpg');
-      padding: 10px;
+      background: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      padding: 20px;
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
     h1 {
       text-align: center;
-      margin-bottom: 20px;
-      font-size: 2em;
-      color: #fff;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 25px;
+      font-size: 2.2em;
+      color: #2c3e50;
     }
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
       margin: 0 auto;
-      flex-grow: 1;
     }
     .card {
-      background: #fff;
+      background: #fdfdfd;
+      border: 1px solid #ddd;
       border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid transparent;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      border: 2px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
     .card-header {
       padding: 15px;
-      font-size: 1.5em;
+      font-size: 1.3em;
       font-weight: bold;
       color: #fff;
       text-align: center;
+      border-radius: 10px 10px 0 0;
     }
-    .yic-header {
-      background-image: linear-gradient(45deg, #ff6f00, #ff8f00);
-    }
-    .ngfp-header {
-      background-image: linear-gradient(45deg, #d50000, #ff1744);
-    }
-    .naic-header {
-      background-image: linear-gradient(45deg, #00bfa5, #00e676);
-    }
-    .ysc-header {
-      background-image: linear-gradient(45deg, #651fff, #7c4dff);
-    }
+    .yic-header { background: #ff9800; }
+    .ngfp-header { background: #e53935; }
+    .naic-header { background: #26a69a; }
+    .ysc-header { background: #5e35b1; }
+
     .card-content {
       padding: 15px;
-      line-height: 1.4;
-      font-size: 0.9em;
-    }
-    .card-content p {
-      margin: 8px 0;
+      font-size: 0.95em;
+      line-height: 1.5;
     }
     .card-content strong {
-      color: #222;
+      color: #000;
     }
     .card-footer {
-      background: #f8f9fa;
+      background: #f1f1f1;
       padding: 10px;
       text-align: center;
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid #ccc;
     }
     .card-footer a {
       text-decoration: none;
       font-weight: bold;
       color: #fff;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      padding: 6px 12px;
+      border-radius: 4px;
       display: inline-block;
-      font-size: 0.9em;
+      margin-bottom: 5px;
     }
-    .yic-btn {
-      background-image: linear-gradient(45deg, #ff6f00, #ff8f00);
-    }
-    .yic-btn:hover {
-      box-shadow: 0 0 10px #ff6f00, 0 0 20px #ff8f00;
-    }
-    .ngfp-btn {
-      background-image: linear-gradient(45deg, #d50000, #ff1744);
-    }
-    .ngfp-btn:hover {
-      box-shadow: 0 0 10px #d50000, 0 0 20px #ff1744;
-    }
-    .naic-btn {
-      background-image: linear-gradient(45deg, #00bfa5, #00e676);
-    }
-    .naic-btn:hover {
-      box-shadow: 0 0 10px #00bfa5, 0 0 20px #00e676;
-    }
-    .ysc-btn {
-      background-image: linear-gradient(45deg, #651fff, #7c4dff);
-    }
-    .ysc-btn:hover {
-      box-shadow: 0 0 10px #651fff, 0 0 20px #7c4dff;
-    }
-    .register-btn {
-      display: block;
-      width: max-content;
-      margin: 20px auto 10px;
-      padding: 10px 20px;
-      background: linear-gradient(45deg, #ff6f00, #ffd54f, #ff6f00);
-      background-size: 200% 200%;
-      color: #fff;
-      font-size: 1.1em;
-      text-decoration: none;
-      border-radius: 40px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: gradientAnimation 3s ease infinite, pulse 2s infinite;
-    }
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 rgba(255, 111, 0, 0.7); }
-      70% { box-shadow: 0 0 15px rgba(255, 111, 0, 0); }
-      100% { box-shadow: 0 0 0 rgba(255, 111, 0, 0); }
-    }
-    .register-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
+    .yic-btn { background: #fb8c00; }
+    .ngfp-btn { background: #d32f2f; }
+    .naic-btn { background: #00897b; }
+    .ysc-btn { background: #673ab7; }
+
     .visible-link {
       font-size: 0.75em;
-      color: #333;
+      color: #555;
       margin-top: 5px;
-      word-break: break-all;
+      word-break: break-word;
     }
+
+    .register-btn {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      width: fit-content;
+    }
+
     .center {
       text-align: center;
     }
-    @media (max-width: 600px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-      .card-header {
-        font-size: 1.3em;
-      }
-      .card-content {
-        font-size: 0.85em;
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    @media print {
+      .register-btn, .card-footer a {
+        background: #444 !important;
+        color: #fff !important;
+        print-color-adjust: exact;
       }
     }
   </style>
@@ -179,77 +126,73 @@
       <div class="card-header yic-header">YIC (Young Innovators Challenge)</div>
       <div class="card-content">
         <p><strong>Criteria:</strong> 13-17 years old, 2-3 students per team</p>
-        <p><strong>Challenge:</strong> "AI for Social Good" – Identify a real problem faced by an everyday hero and develop an AI-powered solution.</p>
-        <p><strong>Submission:</strong> Prototype with AI-Arduino &amp; Pitching slide</p>
-        <p><strong>Due Date:</strong> 30 June 2025 (Mentoring provided)</p>
-        <p><strong>Prize:</strong> Certificate, chance to join state Maker Fair, Medals</p>
-        <p><strong>Cost:</strong> Free (Prototype components: RM30 per group)</p>
+        <p><strong>Challenge:</strong> "AI for Social Good"</p>
+        <p><strong>Submission:</strong> Prototype with AI-Arduino & Pitching slide</p>
+        <p><strong>Due Date:</strong> 30 June 2025</p>
+        <p><strong>Prize:</strong> Certificate, state Maker Fair, Medals</p>
+        <p><strong>Cost:</strong> Free (RM30 for prototype parts)</p>
       </div>
       <div class="card-footer">
         <a href="https://younginnovators.my/" class="yic-btn">Explore YIC</a>
-        <div class="visible-link">Link: https://younginnovators.my/</div>
+        <div class="visible-link">https://younginnovators.my/</div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-header ngfp-header">NGFP (Young Voices Awards)</div>
       <div class="card-content">
-        <p><strong>Criteria:</strong> 13-17 years old, 2-3 students per team</p>
-        <p><strong>Challenge:</strong> Create a positive change in your community – Focus on 1 SDG Goal</p>
-        <p><strong>Submission:</strong> Short essay (400 words) &amp; Video (2 min 30 sec)</p>
-        <p><strong>Due Date:</strong> Tentatively 30 June 2025 (Workshops provided)</p>
-        <p><strong>Prize:</strong> Certificate and cash prize for winners</p>
+        <p><strong>Criteria:</strong> 13-17 years old, 2-3 students</p>
+        <p><strong>Challenge:</strong> Create positive change in your community (SDG focus)</p>
+        <p><strong>Submission:</strong> 400-word essay + 2.5-min video</p>
+        <p><strong>Due Date:</strong> Tentatively 30 June 2025</p>
+        <p><strong>Prize:</strong> Certificate & cash prizes</p>
         <p><strong>Cost:</strong> Free</p>
       </div>
       <div class="card-footer">
         <a href="https://nextgenforesight.org/fellowship/young-voices/" class="ngfp-btn">Discover NGFP</a>
-        <div class="visible-link">Link: https://nextgenforesight.org/fellowship/young-voices/</div>
+        <div class="visible-link">https://nextgenforesight.org/fellowship/young-voices/</div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-header naic-header">NAIC (National AI Competition)</div>
       <div class="card-content">
-        <p><strong>Criteria:</strong> Team of 4 (Category A: Form 3/Year 9 – Form 5/Year 11)</p>
-        <p><strong>Challenge:</strong><br>
-          <em>AI Art:</em> Create an A3 artwork using AI tools.<br>
-          <em>AI Innovation:</em> Propose AI solutions for real-world problems.<br>
-          <em>AI Technical:</em> Develop AI models using coding skills.
-        </p>
-        <p><strong>Submission:</strong><br>
-          <em>AI Art:</em> Final artwork and creative process writeup.<br>
-          <em>AI Innovation:</em> Writeup on the problem, solution, social impact, and prototype.<br>
-          <em>AI Technical:</em> Complete codebase with a detailed methodology.
-        </p>
-        <p><strong>Due Date:</strong> Preliminary: 24 May (Online), Final: Presentation at Sunway University</p>
-        <p><strong>Prize:</strong> Cash, certificate, Google office visit, 6 months premium photo editing</p>
+        <p><strong>Criteria:</strong> Team of 4 (Form 3–5 / Year 9–11)</p>
+        <p><strong>Challenge:</strong> AI Art, AI Innovation, AI Technical</p>
+        <p><strong>Submission:</strong> Artwork, writeup, code, solution</p>
+        <p><strong>Due Date:</strong> 24 May (Prelim), Finals at Sunway</p>
+        <p><strong>Prize:</strong> Cash, certificate, Google visit</p>
         <p><strong>Cost:</strong> Free</p>
       </div>
       <div class="card-footer">
         <a href="https://hyperbyte.ai/naic/" class="naic-btn">Learn About NAIC</a>
-        <div class="visible-link">Link: https://hyperbyte.ai/naic/</div>
+        <div class="visible-link">https://hyperbyte.ai/naic/</div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-header ysc-header">YSC (Youth STEM Cup)</div>
       <div class="card-content">
-        <p><strong>Criteria:</strong> Form a group of 4</p>
-        <p><strong>Challenge:</strong> STEM-related Olympiad quiz</p>
-        <p><strong>Submission:</strong> Quiz submission</p>
-        <p><strong>Due Date:</strong> Prelim: 19th April 2025, Final: 21st June 2025</p>
+        <p><strong>Criteria:</strong> Team of 4</p>
+        <p><strong>Challenge:</strong> STEM Olympiad quiz</p>
+        <p><strong>Submission:</strong> Online quiz</p>
+        <p><strong>Due Date:</strong> 19 April 2025 (Prelim), 21 June (Final)</p>
         <p><strong>Prize:</strong> Cash and certificate</p>
         <p><strong>Cost:</strong> Free</p>
       </div>
       <div class="card-footer">
         <a href="https://amiso.my/ysc/" class="ysc-btn">Check Out YSC</a>
-        <div class="visible-link">Link: https://amiso.my/ysc/</div>
+        <div class="visible-link">https://amiso.my/ysc/</div>
       </div>
     </div>
 
   </div>
 
   <a href="https://forms.office.com/r/AzTVEr1Dr8?embed=true" class="register-btn">Register Now</a>
-  <div class="visible-link center">Link: https://forms.office.com/r/AzTVEr1Dr8?embed=true</div>
+  <div class="center visible-link">https://forms.office.com/r/AzTVEr1Dr8?embed=true</div>
+
+  <div class="footer">
+    Visit: <strong>skss202x.github.io/makerspace</strong>
+  </div>
 </body>
 </html>
