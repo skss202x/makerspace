@@ -15,39 +15,44 @@
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       font-family: 'Roboto', sans-serif;
       background-image: url('https://raw.githubusercontent.com/mrapatiteobs/emojime/430b388dfab577cad50dbf9b3b61be7c740fb121/background.jpg');
-      padding: 20px;
+      padding: 10px; /* Reduced padding */
+      margin: 0; /* Ensure no extra margins */
+      min-height: 100vh; /* Ensure body takes full viewport height */
+      display: flex;
+      flex-direction: column;
     }
     h1 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.8em;
+      margin-bottom: 20px; /* Reduced margin */
+      font-size: 2em; /* Reduced font size */
       color: #fff;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     }
     /* Grid Layout */
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly reduced minmax */
+      gap: 15px; /* Reduced gap */
+      max-width: 1000px; /* Reduced max-width */
       margin: 0 auto;
+      flex-grow: 1; /* Allow grid to expand and fill available space */
     }
     /* Competition Cards */
     .card {
       background: #fff;
-      border-radius: 15px;
+      border-radius: 10px; /* Reduced border-radius */
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 3px solid transparent;
+      border: 2px solid transparent; /* Reduced border */
     }
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      border: 3px solid rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px); /* Reduced hover transform */
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+      border: 2px solid rgba(0, 0, 0, 0.1); /* Reduced border */
     }
     .card-header {
-      padding: 20px;
-      font-size: 1.8em;
+      padding: 15px; /* Reduced padding */
+      font-size: 1.5em; /* Reduced font size */
       font-weight: bold;
       color: #fff;
       background-image: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -67,19 +72,19 @@
       background-image: linear-gradient(45deg, #651fff, #7c4dff);
     }
     .card-content {
-      padding: 20px;
-      line-height: 1.6;
-      font-size: 1em;
+      padding: 15px; /* Reduced padding */
+      line-height: 1.4; /* Reduced line height */
+      font-size: 0.9em; /* Reduced font size */
     }
     .card-content p {
-      margin: 12px 0;
+      margin: 8px 0; /* Reduced margin */
     }
     .card-content strong {
       color: #222;
     }
     .card-footer {
       background: #f8f9fa;
-      padding: 15px;
+      padding: 10px; /* Reduced padding */
       text-align: center;
       border-top: 1px solid #e0e0e0;
     }
@@ -88,49 +93,50 @@
       text-decoration: none;
       font-weight: bold;
       color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
+      padding: 8px 16px; /* Reduced padding */
+      border-radius: 20px; /* Reduced border-radius */
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       display: inline-block;
+      font-size: 0.9em; /* Reduced font size */
     }
     /* Custom Button Colors & Glow Effects */
     .yic-btn {
       background-image: linear-gradient(45deg, #ff6f00, #ff8f00);
     }
     .yic-btn:hover {
-      box-shadow: 0 0 15px #ff6f00, 0 0 30px #ff8f00;
+      box-shadow: 0 0 10px #ff6f00, 0 0 20px #ff8f00; /* Reduced glow */
     }
     .ngfp-btn {
       background-image: linear-gradient(45deg, #d50000, #ff1744);
     }
     .ngfp-btn:hover {
-      box-shadow: 0 0 15px #d50000, 0 0 30px #ff1744;
+      box-shadow: 0 0 10px #d50000, 0 0 20px #ff1744; /* Reduced glow */
     }
     .naic-btn {
       background-image: linear-gradient(45deg, #00bfa5, #00e676);
     }
     .naic-btn:hover {
-      box-shadow: 0 0 15px #00bfa5, 0 0 30px #00e676;
+      box-shadow: 0 0 10px #00bfa5, 0 0 20px #00e676; /* Reduced glow */
     }
     .ysc-btn {
       background-image: linear-gradient(45deg, #651fff, #7c4dff);
     }
     .ysc-btn:hover {
-      box-shadow: 0 0 15px #651fff, 0 0 30px #7c4dff;
+      box-shadow: 0 0 10px #651fff, 0 0 20px #7c4dff; /* Reduced glow */
     }
     /* Spectacular Register Button */
     .register-btn {
       display: block;
       width: max-content;
-      margin: 40px auto 0;
-      padding: 15px 30px;
+      margin: 20px auto 10px; /* Reduced margin */
+      padding: 10px 20px; /* Reduced padding */
       background: linear-gradient(45deg, #ff6f00, #ffd54f, #ff6f00);
       background-size: 200% 200%;
       color: #fff;
-      font-size: 1.4em;
+      font-size: 1.1em; /* Reduced font size */
       text-decoration: none;
-      border-radius: 50px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 40px; /* Reduced border-radius */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Reduced shadow */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: gradientAnimation 3s ease infinite, pulse 2s infinite;
     }
@@ -150,108 +156,26 @@
          box-shadow: 0 0 0 rgba(255, 111, 0, 0.7);
       }
       70% {
-         box-shadow: 0 0 20px rgba(255, 111, 0, 0);
+         box-shadow: 0 0 15px rgba(255, 111, 0, 0);
       }
       100% {
          box-shadow: 0 0 0 rgba(255, 111, 0, 0);
       }
     }
     .register-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px); /* Reduced hover transform */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Reduced shadow */
     }
     /* Responsive Adjustments */
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.2em;
+        font-size: 1.8em;
       }
       .card-header {
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
       .card-content {
-        font-size: 0.95em;
+        font-size: 0.85em;
       }
     }
   </style>
-</head>
-<body>
-  <h1>Makerspace Club 2025 Competitions</h1>
-  <div class="grid-container">
-    
-    <!-- YIC Card -->
-    <div class="card">
-      <div class="card-header yic-header">YIC (Young Innovators Challenge)</div>
-      <div class="card-content">
-        <p><strong>Criteria:</strong> 13-17 years old, 2-3 students per team</p>
-        <p><strong>Challenge:</strong> "AI for Social Good" – Identify a real problem faced by an everyday hero and develop an AI-powered solution.</p>
-        <p><strong>Submission:</strong> Prototype with AI-Arduino &amp; Pitching slide</p>
-        <p><strong>Due Date:</strong> 30 June 2025 (Mentoring provided)</p>
-        <p><strong>Prize:</strong> Certificate, chance to join state Maker Fair, Medals</p>
-        <p><strong>Cost:</strong> Free (Prototype components: RM30 per group)</p>
-      </div>
-      <div class="card-footer">
-        <a href="https://younginnovators.my/" class="yic-btn">Explore YIC</a>
-      </div>
-    </div>
-    
-    <!-- NGFP Card -->
-    <div class="card">
-      <div class="card-header ngfp-header">NGFP (Young Voices Awards)</div>
-      <div class="card-content">
-        <p><strong>Criteria:</strong> 13-17 years old, 2-3 students per team</p>
-        <p><strong>Challenge:</strong> Create a positive change in your community – Focus on 1 SDG Goal</p>
-        <p><strong>Submission:</strong> Short essay (400 words) &amp; Video (2 min 30 sec)</p>
-        <p><strong>Due Date:</strong> Tentatively 30 June 2025 (Workshops provided)</p>
-        <p><strong>Prize:</strong> Certificate and cash prize for winners</p>
-        <p><strong>Cost:</strong> Free</p>
-      </div>
-      <div class="card-footer">
-        <a href="https://nextgenforesight.org/fellowship/young-voices/" class="ngfp-btn">Discover NGFP</a>
-      </div>
-    </div>
-    
-    <!-- NAIC Card -->
-    <div class="card">
-      <div class="card-header naic-header">NAIC (National AI Competition)</div>
-      <div class="card-content">
-        <p><strong>Criteria:</strong> Team of 4 (Category A: Form 3/Year 9 – Form 5/Year 11)</p>
-        <p><strong>Challenge:</strong><br>
-          <em>AI Art:</em> Create an A3 artwork using AI tools.<br>
-          <em>AI Innovation:</em> Propose AI solutions for real-world problems.<br>
-          <em>AI Technical:</em> Develop AI models using coding skills.
-        </p>
-        <p><strong>Submission:</strong><br>
-          <em>AI Art:</em> Final artwork and creative process writeup.<br>
-          <em>AI Innovation:</em> Writeup on the problem, solution, social impact, and prototype.<br>
-          <em>AI Technical:</em> Complete codebase with a detailed methodology.
-        </p>
-        <p><strong>Due Date:</strong> Preliminary: 24 May (Online), Final: Presentation at Sunway University</p>
-        <p><strong>Prize:</strong> Cash, certificate, Google office visit, 6 months premium photo editing</p>
-        <p><strong>Cost:</strong> Free</p>
-      </div>
-      <div class="card-footer">
-        <a href="https://hyperbyte.ai/naic/" class="naic-btn">Learn About NAIC</a>
-      </div>
-    </div>
-    
-    <!-- YSC Card -->
-    <div class="card">
-      <div class="card-header ysc-header">YSC (Youth STEM Cup)</div>
-      <div class="card-content">
-        <p><strong>Criteria:</strong> Form a group of 4</p>
-        <p><strong>Challenge:</strong> STEM-related Olympiad quiz</p>
-        <p><strong>Submission:</strong> Quiz submission</p>
-        <p><strong>Due Date:</strong> Prelim: 19th April 2025, Final: 21st June 2025</p>
-        <p><strong>Prize:</strong> Cash and certificate</p>
-        <p><strong>Cost:</strong> Free</p>
-      </div>
-      <div class="card-footer">
-        <a href="https://amiso.my/ysc/" class="ysc-btn">Check Out YSC</a>
-      </div>
-    </div>
-    
-  </div>
-  
-  <a href="https://forms.office.com/r/AzTVEr1Dr8?embed=true" class="register-btn">Register Now</a>
-</body>
-</html>
